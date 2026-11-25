@@ -1,0 +1,348 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+<style>
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: url("blob:https://www.facebook.com/80ca1a73-1665-4883-8ab7-588232763525")
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #ffffff;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #3989cb;
+}
+
+.logo span { color: #8bc8f4; }
+
+nav a {
+  text-decoration: none;
+  color: #52718e;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+nav a:hover { color: #3198e5; }
+
+.hero {
+  min-height: 570px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(135deg, #e1f2ff, #f7fbff);
+}
+
+.hero-text { max-width: 540px; }
+
+.tag {
+  display: inline-block;
+  background: #d1ebff;
+  color: #3489c9;
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.08;
+  color: #245c91;
+  margin-bottom: 20px;
+}
+
+h1 span { color: #70b9ed; }
+
+.hero-text p {
+  line-height: 1.8;
+  color: #66829e;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 14px;
+  background: #62b3eb;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 15px #acd8f3;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #388fd0;
+  transform: translateY(-3px);
+}
+
+.art {
+  width: 330px;
+  height: 330px;
+  border-radius: 35px;
+  background: white;
+  box-shadow: 0 15px 40px #c5e2f5;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 43px);
+  grid-template-rows: repeat(5, 43px);
+  gap: 5px;
+  transform: rotate(-5deg);
+}
+
+.block {
+  border-radius: 9px;
+  background: #8bc9f4;
+  box-shadow: inset 0 -4px 0 #64a9dc;
+}
+
+.block.dark {
+  background: #398dc9;
+  box-shadow: inset 0 -4px 0 #2471aa;
+}
+
+.block.light {
+  background: #c1e5ff;
+  box-shadow: inset 0 -4px 0 #9bcbed;
+}
+
+.block.empty {
+  background: #edf7ff;
+  box-shadow: none;
+}
+
+section {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  color: #28699f;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #7893aa;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.feature {
+  background: white;
+  padding: 32px 22px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px #dcecf7;
+}
+
+.feature .emoji {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  color: #367cae;
+  margin-bottom: 12px;
+}
+
+.feature p {
+  color: #8199ae;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.about {
+    background: rgba(224, 241, 255, 0.65);
+}
+
+footer {
+  text-align: center;
+  background: white;
+  padding: 25px;
+  color: #7898b4;
+  font-size: 13px;
+}
+
+@media(max-width: 750px) {
+  header {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 65px 6%;
+  }
+
+  .art {
+    width: 290px;
+    height: 290px;
+  }
+
+  .board {
+    grid-template-columns: repeat(5, 37px);
+    grid-template-rows: repeat(5, 37px);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 60px 6%; }
+}
+</style>
+<header>
+  <div class="logo">BLOCK BLAST 
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <div class="hero-text">
+    <div class="tag">A little puzzle, a lot of fun</div>
+    <h1>Welcome to <span>Block Blast!</span></h1>
+    <p>
+      Get ready to explore a world of fun, strategy, and exciting challenges! Block Blast is a puzzle game where every move counts. Arrange colorful blocks, clear lines, and aim for the highest score. Test your skills, challenge your mind, and enjoy a relaxing yet exciting gaming experience. Are you ready to play?
+    </p>
+    <a href="#features" class="btn">Explore blockblast!</a>
+  </div>
+
+  <div class="art">
+    <div class="board">
+      <div class="block dark"></div>
+      <div class="block"></div>
+      <div class="block empty"></div>
+      <div class="block light"></div>
+      <div class="block"></div>
+
+      <div class="block dark"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block empty"></div>
+      <div class="block light"></div>
+
+      <div class="block empty"></div>
+      <div class="block dark"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block light"></div>
+
+      <div class="block light"></div>
+      <div class="block empty"></div>
+      <div class="block dark"></div>
+      <div class="block"></div>
+      <div class="block empty"></div>
+
+      <div class="block"></div>
+      <div class="block light"></div>
+      <div class="block"></div>
+      <div class="block empty"></div>
+      <div class="block dark"></div>
+    </div>
+  </div>
+</div>
+
+<section id="features">
+  <h2 class="section-title">Discover the Fun!</h2>
+  <p class="subtitle">
+    Simple, colorful, and entertaining. Here's what makes
+    Block Blast special.
+  </p>
+
+  <div class="features">
+    <div class="feature">
+      <div class="emoji">🧩</div>
+      <h3>Brain Challenge</h3>
+      <p>Use your logic and creativity to explore different block puzzle challenges.</p>
+    </div>
+
+    <div class="feature">
+      <div class="emoji">💙</div>
+      <h3>Lovely Design</h3>
+      <p>Enjoy a relaxing baby-blue theme with a cute and welcoming atmosphere.</p>
+    </div>
+
+    <div class="feature">
+      <div class="emoji">⭐</div>
+      <h3>Endless Fun</h3>
+      <p>Challenge yourself and enjoy every puzzle-solving moment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="section-title">About Block Blast</h2>
+  <p class="subtitle">
+    Welcome to Block Blast!
+ 
+    Discover the exciting world of Block Blast, a fun and engaging puzzle game that combines entertainment,
+   creativity, and strategy. The game challenges players to arrange different shaped blocks on a board by dragging and dropping them into the right spaces. 
+   Your goal is to complete full horizontal rows or vertical columns to clear blocks, earn points, and keep the board from filling up. 
+   Every move requires careful thinking and planning, making each round a new and exciting challenge.
+   Whether you're a beginner or an experienced puzzle lover, Block Blast offers an enjoyable gaming experience for everyone.
+   With its colorful design, simple controls, and challenging gameplay, you can relax while improving your focus, logical thinking, and problem-solving skills.
+   Challenge yourself to achieve a higher score, beat your personal best, and discover how far your strategy can take you. 
+   Play, think, and enjoy the endless fun of Block Blast!
+
+    <br><br>
+    Think smart. Place blocks. Have fun!
+    <br>
+    <strong>Welcome to your puzzle world. </strong>
+  </p>
+  <a href="#home" class="btn">Back to Top ↑</a>
+</section>
+</main>
+
+<footer>
+  2026 Block Blast Luna | Your Little Blue Puzzle World.
+</footer> 
+</body> 
+</html>
